@@ -5,8 +5,16 @@ export const theme = extendTheme({
   config: {
     cssVarPrefix: projectConfig.name,
   },
-  font: {
-    heading: '"Roboto", sans-serif',
-    body: '"Roboto", sans-serif',
+  fonts: {
+    heading: 'Barlow, sans-serif',
+    body: 'Barlow, sans-serif',
+  },
+  colors: {
+    black: {
+      650: '#242424',
+    },
+    orange: {
+      650: '#EBAA00',
+    },
   },
 });

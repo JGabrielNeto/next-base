@@ -1,24 +1,19 @@
-import { useUsers } from '@app/services/react-query/queries/useUsers';
-import { Flex, ListItem, Text, UnorderedList } from '@chakra-ui/react';
 import type { NextPage } from 'next';
+import { Flex } from '@chakra-ui/react';
+import DefaultLayout from '@app/components/layouts/DefaultLayout';
 
 export const Home: NextPage = () => {
-  const { data } = useUsers();
   return (
-    <Flex w="full" h="full">
-      <Flex direction="column">
-        <Text>Users:</Text>
-        <UnorderedList>
-          {data.map((user) => (
-            <ListItem key={user.id}>
-              <Text>
-                {user.firstName} {user.lastName}
-              </Text>
-            </ListItem>
-          ))}
-        </UnorderedList>
+    <DefaultLayout fontSize={20} color="white">
+      <Flex
+        height="100vh"
+        width="100vw"
+        alignItems="center"
+        justifyContent="center"
+      >
+        Sphinx of black quartz, judge my vow
       </Flex>
-    </Flex>
+    </DefaultLayout>
   );
 };
 
